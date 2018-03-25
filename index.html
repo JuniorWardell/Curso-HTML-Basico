@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <!--informacion que el usuario no puede ver a simple vista-->
 	<title>Titulo de la pagina</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="style.css"> <!-- enlazando el documento con un archivo CSS -->
 	<link rel="shortcut icon" href="imagenes/logomark.png" type="image/x-icon"> <!-- agregando icono de la pagina -->
 </head>
@@ -84,11 +85,58 @@
 			<td>elemento 8</td>
 			<td>elemento 9</td>
 		</tr>
-
+		
 	</table>
 	<br>
 	<hr>
+	
+	<!-- clase 7: formularios -->
+	<h2>Formulario</h2>
+	<form action="#">
+<!-- <form>
+	atributos: 
+	action="recibe la URL del archivo que procesara los datos"
+	method="POST" o "GET"
+-->
+	<label for="nombre">Name:</label>	<!-- for="id del input"> texto que identifica al input -->
+	<input type="text" maxlength="30" minlength="3" name="nombre" id="nombre" required>
+<!-- <input>	entrada de texto
+	atributos:  
+	placeholder="comentario" 
+	maxlength="cantidad maxima de caracteres que se pueden ingresar" 
+	name="establecer al servidor que valor se esta pidiendo" 
+	id="conector del label">  
+-->
+	<br><br>
+	<label for="correo">Email:</label>
+	<input type="email" name="correo" id="correo" placeholder="Example:contact@gmail.com" required>
+	<br><br>
+	<label for="contrasenia">Password:</label>
+	<input type="password" id="contrasenia" name="contrasenia" minlength="8" required>
+	<br><br>
+	<label for="sexo">Sexo:</label>
+	<br><br>
+	<label for="man">Man</label>
+	<input type="radio" name="sexo" id="sexo man">
+	<label for="women">Women</label>
+	<input type="radio" name="sexo" id="sexo women">
+	<br><br>
+	<label for="pais">Pais:</label>
+	<select name="pais" id="pais">
+		<option value="Panama">Panamá</option>
+		<option value="Colombia">Colombia</option>
+		<option value="Mexico">Mexico</option>
+		<option value="...">...</option>
+	</select>
+	<br><br>
+	<input type="submit" value="Send">	<!-- envia los datos a la URl puesta en el atributo action de la etiqueta form -->
+	<input type="button" value="Cancel">	<!-- agregar evento con  JavaScript -->
+	</form>
+	<br>
+	<hr>
 
+
+	
 
 	<script src="scripts.js"></script><!-- enlazando el documento con un archivo de JavaScript -->
 </body>
