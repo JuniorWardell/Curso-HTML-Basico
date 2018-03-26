@@ -7,151 +7,195 @@
 	<link rel="stylesheet" href="style.css"> <!-- enlazando el documento con un archivo CSS -->
 	<link rel="shortcut icon" href="imagenes/logomark.png" type="image/x-icon"> <!-- agregando icono de la pagina -->
 	<meta name="description" content="descripcion breve y clara de nuestro sitio web">
+	<style>
+		.titulo{
+			font-size: 5em;}
+		.subtitulo{
+			font-size: 3em;}
+		h1{
+			font-size: 2em;}
+	</style>
 </head>
 <body>
-	<!-- clase 1: Introduccion -->
-	<h2>Introduccion</h2>
-	<h1>- H1 (titulo principal)</h1>
-	<h2>- H2 (subtitulos)</h2>
-	<h3>- H3 subtitulo de H2</h3>
-	<h4>- H4 subtitulo de H3</h4>
-	<h5>- H5 subtitulo de H4</h5>
-	<h6>- H6 subtitulo de H5</h6>
-	<hr>  <!--para hacer una linea separadora -->
-	
-	<!-- clase 2: etiquetas para textos -->
-	<h2>Etiquetas para texto</h2>
-	<p>Parrafo</p>
-	<p><strong>texto importante</strong></p>
-	<p><span>span no hace nada, solo se usa para manejarla con CSS</span></p>
-	<blockquote>  <!-- es para agregar un bloque de cita -->
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-		Esse reiciendis repellendus, eveniet totam itaque <br> in natus harum saepe 
-		dolorem excepturi vel provident tempora sunt soluta aliquam quo tenetur 
-		ab dicta?
-	</blockquote>
-	<cite>Autor: Lorem Iptsu</cite>	 <!-- para agregar el autor de una cita -->
-	<br><br>  <!-- salto de linea -->
-	<hr>
-	
-	<!-- clase 3: enlaces -->
-	<h2>Enlaces</h2>
-	<a target="_blank" href="https://www.google.com/">Ir a Google</a> <!-- enlace a ruta absoluta (pagina externa)-->
-	<!-- el atributo: target: "_blank" es para abrir el enlace en una nueva ventana -->
-	<br><br>
-	<a href="imagenes/1.png">Ir a la imagen 1</a>	<!-- enlace a ruta relativa -->
-	<br><br>
-	<hr>
-	
-	<!-- clase 4: listas -->
-	<h2>Listas</h2>
-	<ul>	<!-- lista desordenada -->
-		<li><a href="#">Item 1</a></li>	
-		<li><a href="#">Item 2</a></li>
-		<li><a href="#">Item 3</a></li>
-	</ul>
+	<header>
+		<div>
+			<img src="imagenes/logomark.png" width="20%" alt="Logo HTML5">
+		</div>
+		<p class="titulo">Curso Basico de HTML</p>
+	</header>
 
-	<ol>	<!-- lista ordenada -->
-		<li><a href="#">Item 1</a></li>	
-		<li><a href="#">Item 2</a></li>
-		<li><a href="#">Item 3</a></li>
-	</ol>
-	<hr>
+	<section class="wrapper">
+		<section class="main">
 
-	<!-- clase 5: imagenes -->
-	<h2>Album</h2>
-	<img src="imagenes/1.png" width=30% alt="aumentar autoestima" title="imagen1" />
-	<img src="imagenes/2.png" width=30% alt="empleado renuncia" title="imagen2" />
-	<img src="imagenes/3.png" width=30% alt="cambio de entorno" title="imagen3" />
-	<br><br>
-	<hr>
-	
-	<!-- clase 6: tablas -->
-	<table>
-		<h2>Tablas</h2>	
-		<tr>	<!-- fila -->
-			<td>elemento 1</td>	<!-- columnas -->
-			<td>elemento 2</td>	<!-- columnas -->
-			<td>elemento 3</td>	<!-- columnas -->
-		</tr>
-		
-		<tr>
-			<td>elemento 4</td>
-			<td>elemento 5</td>
-			<td>elemento 6</td>
-		</tr>
-		
-		<tr>
-			<td>elemento 7</td>
-			<td>elemento 8</td>
-			<td>elemento 9</td>
-		</tr>
-		
-	</table>
-	<br>
-	<hr>
-	
-	<!-- clase 7: formularios -->
-	<h2>Formulario</h2>
-	<form action="#">
-<!-- <form>
-	atributos: 
-	action="recibe la URL del archivo que procesara los datos"
-	method="POST" o "GET"
--->
-	<label for="nombre">Name:</label>	<!-- for="id del input"> texto que identifica al input -->
-	<input type="text" maxlength="30" minlength="3" name="nombre" id="nombre" required>
-<!-- <input>	entrada de texto
-	atributos:  
-	placeholder="comentario" 
-	maxlength="cantidad maxima de caracteres que se pueden ingresar" 
-	name="establecer al servidor que valor se esta pidiendo" 
-	id="conector del label">  
--->
-	<br><br>
-	<label for="correo">Email:</label>
-	<input type="email" name="correo" id="correo" placeholder="Example:contact@gmail.com" required>
-	<br><br>
-	<label for="contrasenia">Password:</label>
-	<input type="password" id="contrasenia" name="contrasenia" minlength="8" required>
-	<br><br>
-	<label for="sexo">Sexo:</label>
-	<br><br>
-	<label for="man">Man</label>
-	<input type="radio" name="sexo" id="sexo man">
-	<label for="women">Women</label>
-	<input type="radio" name="sexo" id="sexo women">
-	<br><br>
-	<label for="pais">Pais:</label>
-	<select name="pais" id="pais">
-		<option value="Panama">Panamá</option>
-		<option value="Colombia">Colombia</option>
-		<option value="Mexico">Mexico</option>
-		<option value="...">...</option>
-	</select>
-	<br><br>
-	<label for="visa">VisaMastercard:</label>
-	<input type="checkbox" name="visa" id="visa">
-	<br><br>
-	<input type="submit" value="Send">	<!-- envia los datos a la URl puesta en el atributo action de la etiqueta form -->
-	<input type="button" value="Cancel">	<!-- agregar evento con  JavaScript -->
-	</form>
-	<br>
-	<hr>
+			<article>
+				<!-- clase 1: Introduccion -->
+				<p class="subtitulo">Introduccion</p>
+				<h1>- H1 (titulo principal)</h1>
+				<h2>- H2 (subtitulos)</h2>
+				<h3>- H3 subtitulo de H2</h3>
+				<h4>- H4 subtitulo de H3</h4>
+				<h5>- H5 subtitulo de H4</h5>
+				<h6>- H6 subtitulo de H5</h6>
+				<hr>  <!--para hacer una linea separadora -->
+			</article>
+			
+			<article>
+				<!-- clase 2: etiquetas para textos -->
+				<p class="subtitulo">Etiquetas para texto</p>
+				<p>Parrafo</p>
+				<p><strong>texto importante</strong></p>
+				<p><span>span no hace nada, solo se usa para manejarla con CSS</span></p>
+				<blockquote>  <!-- es para agregar un bloque de cita -->
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+					Esse reiciendis repellendus, eveniet totam itaque <br> in natus harum saepe 
+					dolorem excepturi vel provident tempora sunt soluta aliquam quo tenetur 
+					ab dicta?
+				</blockquote>
+				<cite>Autor: Lorem Iptsu</cite>	 <!-- para agregar el autor de una cita -->
+				<br><br>  <!-- salto de linea -->
+				<hr>
+			</article>
+			
+			<article>
+				<!-- clase 3: enlaces -->
+				<p class="subtitulo">Enlaces</p>
+				<a target="_blank" href="https://www.google.com/">Ir a Google</a> <!-- enlace a ruta absoluta (pagina externa)-->
+				<!-- el atributo: target: "_blank" es para abrir el enlace en una nueva ventana -->
+				<br><br>
+				<a href="imagenes/1.png">Ir a la imagen 1</a>	<!-- enlace a ruta relativa -->
+				<br><br>
+				<hr>
+			</article>
+			
+			<article>
+				<!-- clase 4: listas -->
+				<p class="subtitulo">Listas</p>
+				<ul>	<!-- lista desordenada -->
+					<li><a href="#">Item 1</a></li>	
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
 
-	<!-- clase 8: creando una estructura de contenido - Layout -->
-	<h2> Creando una estructura de contenido - Layout</h2>
-	<a href="paginaEstructurada.html">Pagina estructurada</a>
-	<br><br>
-	<hr>
-	
-	<!-- clase 9: metadatos  -->
-	<!-- informacion fue agregada en el head -->
+				<ol>	<!-- lista ordenada -->
+					<li><a href="#">Item 1</a></li>	
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ol>
+				<hr>
+			</article>
+
+			<article>
+				<!-- clase 5: imagenes -->
+				<p class="subtitulo">Album</p>
+				<img src="imagenes/1.png" width=30% alt="aumentar autoestima" title="imagen1" />
+				<img src="imagenes/2.png" width=30% alt="empleado renuncia" title="imagen2" />
+				<img src="imagenes/3.png" width=30% alt="cambio de entorno" title="imagen3" />
+				<br><br>
+				<hr>
+			</article>
+			
+			<article>
+				<!-- clase 6: tablas -->
+				<table>
+					<p class="subtitulo">Tablas</p>	
+					<tr>	<!-- fila -->
+						<td>elemento 1</td>	<!-- columnas -->
+						<td>elemento 2</td>	<!-- columnas -->
+						<td>elemento 3</td>	<!-- columnas -->
+					</tr>
+						
+					<tr>
+						<td>elemento 4</td>
+						<td>elemento 5</td>
+						<td>elemento 6</td>
+					</tr>
+					
+					<tr>
+						<td>elemento 7</td>
+						<td>elemento 8</td>
+						<td>elemento 9</td>
+					</tr>
+				</table>
+				<br>
+				<hr>
+			</article>
+			
+			<article>
+				<!-- clase 7: formularios -->
+				<p class="subtitulo">Formulario</p>
+				<form action="#">
+						<!-- <form>
+							atributos: 
+							action="recibe la URL del archivo que procesara los datos"
+							method="POST" o "GET"
+							usar Post si se va a manejar con contraseñas y datos delicados
+						-->
+					<label for="nombre">Name:</label>	<!-- for="id del input"> texto que identifica al input -->
+					<input type="text" maxlength="30" minlength="3" name="nombre" id="nombre" required>
+						<!-- <input>	entrada de texto
+							atributos:  
+							placeholder="comentario" 
+							maxlength="cantidad maxima de caracteres que se pueden ingresar" 
+							name="establecer al servidor que valor se esta pidiendo" 
+							id="conector del label">  
+						-->
+					<br><br>
+					<label for="correo">Email:</label>
+						<input type="email" name="correo" id="correo" placeholder="Example:contact@gmail.com" required>
+					<br><br>
+					<label for="contrasenia">Password:</label>
+						<input type="password" id="contrasenia" name="contrasenia" minlength="8" required>
+					<br><br>
+					<label for="sexo">Sexo:</label>
+					<br><br>
+					<label for="man">Man</label>
+						<input type="radio" name="sexo" id="sexo man">
+					<label for="women">Women</label>
+						<input type="radio" name="sexo" id="sexo women">
+					<br><br>
+					<label for="pais">Pais:</label>
+						<select name="pais" id="pais">
+							<option value="Panama">Panamá</option>
+							<option value="Colombia">Colombia</option>
+							<option value="Mexico">Mexico</option>
+							<option value="...">...</option>
+						</select>
+					<br><br>
+					<label for="visa">VisaMastercard:</label>
+						<input type="checkbox" name="visa" id="visa">
+					<br><br>
+						<input type="submit" value="Send">	<!-- envia los datos a la URl puesta en el atributo action de la etiqueta form -->
+						<input type="button" value="Cancel">	<!-- agregar evento con  JavaScript -->
+				</form>
+				<br>
+				<hr>
+			</article>
+
+			<article>
+				<!-- clase 8: creando una estructura de contenido - Layout -->
+				<p class="subtitulo"> Creando una estructura de contenido - Layout</p>
+				<ul>
+					<li><a href="paginaEstructurada.html">Pagina estructurada</a></li>
+				</ul>
+				<hr>
+			</article>
+			
+			<!-- clase 9: metadatos  -->
+			<!-- informacion fue agregada en el head -->
+
+		</section>
+	</section>
+
+	<footer>
+		<br>
+		<div>
+			<img src="imagenes/FM.jpg" width="50"  alt="Logo FalconMaster">
+		</div>
+		<p>Curso dictado por: <strong>FalconMasters</strong></p>
+		<a href="https://www.youtube.com/watch?v=cqMfPS8jPys&list=PLhSj3UTs2_yVHt2DgHky_MzzRC58UHE4z">Acceder al Curso</a>
+	</footer>
 
 	
-	<script>
-		alert("Curso Basico de HTML \n\n Aceptar para continuar con el curso");
-	</script>
 	<script src="scripts.js"></script> <!-- enlazando el documento con un archivo de JavaScript -->
 </body>
 </html>
